@@ -1,0 +1,113 @@
+// Main
+/*
+body{
+	background-color: $background;
+	font-family: $helvetica;
+}
+
+.primary-btn{
+	@include button($primary, $primary-dark, #fff);
+}
+
+.secondary-btn{
+	@include button();
+}
+
+.border{
+	border: 1px solid #ccc;
+	p{
+		color: green;
+	}
+}
+
+*/
+
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+	box-sizing: border-box;
+
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+body{
+	text-align: center;
+	padding-top:18rem;
+	background-color: $background;
+	font-family: $helvetica;
+}
+
+.wrapper{
+	background-color: $box-background;
+	height: 15rem;
+	width: 50%;
+	padding-top: 3rem;
+	margin: 0 auto;
+}
+
+h1{
+@include h1($h1-color);
+
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+
+
+.icon-ok-circled{
+	@include button($bg-color, $text-hover-color, $text-color, $bg-hover-color, $text-shadow);
+	border-radius: 25px;
+ font-size: 50px;
+ border: rgba(0, 0, 0, 0);
+
+	&:hover{
+		border-bottom: solid #60adc0;
+		border-bottom-width: 8px;
+		border-left: solid #81CFE0;
+		border-left-width: 7px;
+	  transition: all linear 200ms;
+	}
+}
+
+.icon-logo{
+	@include button($bg-color, $text-hover-color, $text-color, $bg-hover-color, $text-shadow);
+	border-radius: 25px;
+ font-size: 50px;
+ border: rgba(0, 0, 0, 0);
+
+	&:hover{
+		border-bottom: solid #60adc0;
+		border-bottom-width: 8px;
+		border-left: solid #81CFE0;
+		border-left-width: 7px;
+	  transition: all linear 200ms;
+	}
+}
+
+
+.float {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.float:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+}

@@ -1,0 +1,215 @@
+/* This file Imports all your scss partials to be piled in
+one style sheet, which you can attach to your html.
+All files that are prefixed with an underscore
+"_namename-of-file.scss" are called partials 0 meaning that
+their css isn't compiled unless its imported into an unprefixed .scss file */
+/* are placeholders for storing information that you want to reuse
+ throughout your styles. You can store things like colours,
+ font-stacks, or any css value you think you might want to reuse.
+ SCSS uses the  '$' symbol to declare variables. */
+/*
+body{
+	background-color: $background;
+	font-family: $helvetica;
+}
+
+.primary-btn{
+	@include button($primary, $primary-dark, #fff);
+}
+
+.secondary-btn{
+	@include button();
+}
+
+.border{
+	border: 1px solid #ccc;
+	p{
+		color: green;
+	}
+}
+
+*/
+@-moz-viewport {
+  width: device-width;
+  scale: 1; }
+
+@-ms-viewport {
+  width: device-width;
+  scale: 1; }
+
+@-o-viewport {
+  width: device-width;
+  scale: 1; }
+
+@-webkit-viewport {
+  width: device-width;
+  scale: 1; }
+
+@viewport {
+  width: device-width;
+  scale: 1; }
+
+/* line 31, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/components/main */
+html {
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%; }
+
+/* line 40, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/components/main */
+body {
+  text-align: center;
+  padding-top: 18rem;
+  background-color: #2980b9;
+  font-family: helvetica, arial, sans-serif; }
+
+/* line 47, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/components/main */
+.wrapper {
+  background-color: #ecf0f1;
+  height: 15rem;
+  width: 50%;
+  padding-top: 3rem;
+  margin: 0 auto; }
+
+/* line 55, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/components/main */
+h1 {
+  color: #3498db; }
+
+/* line 60, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/components/main */
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* line 66, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/components/main */
+.icon-ok-circled {
+  background-color: #ecf0f1;
+  color: #95a5a6;
+  border-radius: 25px;
+  font-size: 50px;
+  border: rgba(0, 0, 0, 0); }
+  /* line 7, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/mixins */
+  .icon-ok-circled:hover {
+    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
+    color: rgba(255, 184, 0, 0.8);
+    background-color: #fff; }
+  /* line 72, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/components/main */
+  .icon-ok-circled:hover {
+    border-bottom: solid #60adc0;
+    border-bottom-width: 8px;
+    border-left: solid #81CFE0;
+    border-left-width: 7px;
+    transition: all linear 200ms; }
+
+/* line 81, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/components/main */
+.icon-logo {
+  background-color: #ecf0f1;
+  color: #95a5a6;
+  border-radius: 25px;
+  font-size: 50px;
+  border: rgba(0, 0, 0, 0); }
+  /* line 7, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/mixins */
+  .icon-logo:hover {
+    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
+    color: rgba(255, 184, 0, 0.8);
+    background-color: #fff; }
+  /* line 87, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/components/main */
+  .icon-logo:hover {
+    border-bottom: solid #60adc0;
+    border-bottom-width: 8px;
+    border-left: solid #81CFE0;
+    border-left-width: 7px;
+    transition: all linear 200ms; }
+
+/* line 97, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/components/main */
+.float {
+  display: inline-block;
+  transition-duration: 0.3s;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0); }
+
+/* line 109, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/components/main */
+.float:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px); }
+
+@font-face {
+  font-family: 'gregfont';
+  src: url('../fonts/gregfont.eot?81959089');
+  src: url('../fonts/gregfont.eot?81959089#iefix') format('embedded-opentype'), url('../fonts/gregfont.woff?81959089') format('woff'), url('../fonts/gregfont.ttf?81959089') format('truetype'), url('../fonts/gregfont.svg?81959089#gregfont') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'gregfont';
+    src: url('../font/gregfont.svg?81959089#gregfont') format('svg');
+  }
+}
+*/
+/* line 22, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/components/gregfont */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "gregfont";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+/* line 53, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/components/gregfont */
+.icon-logo:before {
+  content: '\e800'; }
+
+/* '' */
+/* line 54, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/components/gregfont */
+.icon-ok-circled:before {
+  content: '\e801'; }
+
+/* '' */
+/* line 55, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/components/gregfont */
+.icon-reply:before {
+  content: '\e802'; }
+
+/* '' */
+/* line 56, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/components/gregfont */
+.icon-spin5:before {
+  content: '\e803'; }
+
+/* '' */
+/* line 57, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/components/gregfont */
+.icon-pencil-squared:before {
+  content: '\e804'; }
+
+/* '' */
+/* line 58, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/components/gregfont */
+.icon-pin:before {
+  content: '\e805'; }
+
+/* '' */
+/* line 59, /Users/Gregleblanc/Documents/GD Year 3 W/web/exercise-2-scss/scss/components/gregfont */
+.icon-cog:before {
+  content: '\e806'; }
+
+/* '' */

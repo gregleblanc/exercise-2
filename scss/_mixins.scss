@@ -1,0 +1,17 @@
+// Mixins
+
+@mixin button($bg-color, $text-hover-color, $text-color, $bg-hover-color, $text-shadow){
+	background-color: $bg-color;
+	color: $text-color;
+
+	&:hover{
+		text-shadow: $text-shadow;
+		color: $text-hover-color;
+	  background-color: $bg-hover-color;
+	}
+}
+
+
+@mixin h1($h1-color){
+color: $h1-color;
+}
